@@ -1,0 +1,10 @@
+services:
+  - type: static
+    name: intern-management
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist/intern-management/browser
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
